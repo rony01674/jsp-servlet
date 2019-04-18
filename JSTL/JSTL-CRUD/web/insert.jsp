@@ -23,7 +23,7 @@
                 <tbody>
                     <tr>
                         <td><label>Product Name</label></td>
-                        <td><input type="text" name="pame"/></td>
+                        <td><input type="text" name="pname"/></td>
                     </tr>
                     <tr>
                         <td><label>Quantity</label></td>
@@ -36,5 +36,17 @@
                 </tbody>
             </table>
         </form>
+        <font color="red">
+        <c:if test="${not empty param.errMsg}">
+            <c:out value="${param.errMsg}"/>
+            <a href="index.jsp">Go Back</a>
+        </c:if>
+        </font>
+        <font color="green">
+        <c:if test="${not empty param.succMsg}">
+            <c:out value="${param.succMsg}"/>
+            <a href="index.jsp">Go Back</a>
+        </c:if>
+        </font>
     </body>
 </html>
